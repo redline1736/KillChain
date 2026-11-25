@@ -1,0 +1,28 @@
+// title must be <name>.config
+
+// run sources within thread to and compile all sources to source.txt 
+// <https> in custom tooling sends a boolean literal
+// threads default is 5 can be changed to anything
+
+
+
+example
+
+source:
+    threads:10
+    input:
+    - data.txt 
+    - shodan, <key>, product:"Apache httpd" version:2.4.x'
+
+case:
+  - match:
+        product: Apache httpd
+        version: 2.4.59
+
+    verify:
+        - metasploit auxiliary/scanner/http/apache_version
+
+    exploit:
+        - metasploit exploit/multi/http/apache_normalize_path_rce
+
+

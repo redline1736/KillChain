@@ -1,0 +1,4 @@
+|192.168.1.10|80|Apache httpd|2.4.59|Example Corp|
+|10.0.0.5|443|nginx|1.24.0|Acme Inc|
+|192.168.1.20|8080|Apache Tomcat|9.0.86|Target Ltd|
+|10.0.0.15|22|OpenSSH|8.9p1|SecureCorp|
